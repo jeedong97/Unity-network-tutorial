@@ -87,18 +87,18 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "HatOn",
+                    "name": "HatOff",
                     "type": "Button",
-                    "id": "d6660534-7834-4d72-baf2-503ff81f5713",
+                    "id": "7df1dc17-b99a-405f-b239-1ef8414e9eb3",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
                 },
                 {
-                    "name": "HatOff",
+                    "name": "HatOn",
                     "type": "Button",
-                    "id": "facb7b8a-5a3f-4421-97e9-9d7e38208a06",
+                    "id": "e3ca29d3-b9e7-418c-8b20-bfd4c0f5652d",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
@@ -493,23 +493,23 @@
                 },
                 {
                     "name": "",
-                    "id": "d8ac9615-202b-4744-9d8d-35f6045e609a",
+                    "id": "b782cd2c-6149-4768-bae4-2e92421eba9a",
                     "path": "<Keyboard>/h",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "HatOn",
+                    "action": "HatOff",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "56c38e74-cbe8-4b26-9f3d-c51f9cf94f83",
+                    "id": "b16b533b-6a1d-4fd8-a41a-95e33854222e",
                     "path": "<Keyboard>/g",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "HatOff",
+                    "action": "HatOn",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
