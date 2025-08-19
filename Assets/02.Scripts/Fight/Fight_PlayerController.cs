@@ -11,6 +11,8 @@ public class Fight_PlayerController : MonoBehaviourPun
     [SerializeField] private GameObject punchBox;
     [SerializeField] private GameObject kickBox;
 
+    private bool isAttack = false;
+
     void Start()
     {
         anim = GetComponent<Animator>();
@@ -29,33 +31,26 @@ public class Fight_PlayerController : MonoBehaviourPun
 
     void OnPunch()
     {
-        StartCoroutine(PunchRoutine());
-    }
-
-    IEnumerator PunchRoutine()
-    {
-        anim.SetTrigger("Punch");
-
-        yield return new WaitForSeconds(0.5f);
-        punchBox.SetActive(true);
-
-        yield return new WaitForSeconds(0.3f);
-        punchBox.SetActive(false);
+        if (!isAttack)
+            StartCoroutine(AttackRoutine("Punch", 0.5f, 0.3f, punchBox));
     }
 
     void OnKick()
     {
-        StartCoroutine(KickRoutine());
+        if (!isAttack)
+            StartCoroutine(AttackRoutine("Kick", 0.6f, 0.2f, kickBox));
     }
 
-    IEnumerator KickRoutine()
+    IEnumerator AttackRoutine(string parameter, float playTime, float endTime, GameObject hitBox)
     {
-        anim.SetTrigger("Kick");
+        isAttack = true;
+        anim.SetTrigger(parameter);
 
-        yield return new WaitForSeconds(0.5f);
-        kickBox.SetActive(true);
+        yield return new WaitForSeconds(playTime);
+        hitBox.SetActive(true);
 
-        yield return new WaitForSeconds(0.3f);
-        kickBox.SetActive(false);
+        yield return new WaitForSeconds(endTime);
+        hitBox.SetActive(false);
+        isAttack = false;
     }
 }

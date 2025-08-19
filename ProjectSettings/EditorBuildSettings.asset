@@ -9,8 +9,8 @@ EditorBuildSettings:
     path: Assets/01.Scenes/Simple/Intro.unity
     guid: 79bc99b8a95b6464798455068f3e34cc
   - enabled: 1
-    path: Assets/01.Scenes/Simple/Simple.unity
-    guid: 5e75434c5c251ba4b8a285e8516d661e
+    path: Assets/01.Scenes/Simple/Fight_Main.unity
+    guid: 0fa2808594547b24b85eaf1b101dbd83
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
